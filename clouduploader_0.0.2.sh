@@ -1,13 +1,11 @@
 #!/bin/bash
 
 SHOW_ALL_STORAGES=exec az storage account list | grep 'name'
-#SHOW_ALL_CONTAINERS=exec az storage container list --account-name $BLOB_STORAGE_NAME | grep 'name'
 AUTH_MODE=login
 
 $SHOW_ALL_STORAGES
 
 main_upload() {
-
 
     ### UPLOAD ###
     UPLOAD=$(exec az storage blob upload\
@@ -57,7 +55,6 @@ link() {
 
 
 read -p "Enter blob storage name: " BLOB_STORAGE_NAME
-#$show_all_containers
 exec az storage container list --account-name $BLOB_STORAGE_NAME --auth-mode $AUTH_MODE | grep 'name'
 read -p "Enter name of container: " CONTAINER_NAME
 
@@ -112,9 +109,7 @@ else
         fi
 
 fi 
-#echo "$CHECK_BLOB"
 
-### DO |YOU NEED LINK? ###
 
 
 
