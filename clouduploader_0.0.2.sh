@@ -33,10 +33,12 @@ main_upload() {
 
 }
 
+
 link() {
     read -p "Do you want to get sharebale link? y/N " LINK_AGREE
 
     if [[ "$LINK_AGREE" == "Y" || "$LINK_AGREE" == "y" ]] ; then
+        read -p "How many days link works? (max. 7 days) " DAYS
         LINK=$(exec az storage blob generate-sas\
         --account-name $BLOB_STORAGE_NAME\
         --container-name $CONTAINER_NAME\
@@ -45,13 +47,14 @@ link() {
         --auth-mode $AUTH_MODE\
         --as-user\
         --full-uri\
-        --expiry `date '+%F' -d "$end_date+3 days"`)
-        echo "The link is valid during 3 days"
+        --expiry `date '+%F' -d "$end_date+$DAYS days"`)
+        echo "The link is valid during $DAYS days"
         echo $LINK
     else
-        echo "else"
+        exit 0
     fi 
 }
+
 
 read -p "Enter blob storage name: " BLOB_STORAGE_NAME
 #$show_all_containers
