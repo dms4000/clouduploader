@@ -8,7 +8,7 @@ Now you may upload one file at once.
 # How to Install
 
 1. Clone repository `git clone https://github.com/dms4000/clouduploader.git`
-2. Copy script for example to directory ~/bin `cp clouduploader_0.0.2.sh ~/bin/clouduploader`
+2. Copy script for example to directory ~/bin `cp clouduploader.sh ~/bin/clouduploader`
 3. Ensure the script is executable by running: `chmod +x ~/bin/clouduploader`
 4. Add the Directory to Your PATH. 
     - Open your `~/.bashrc` file with a text editor (e.g., `nano ~/.bashrc`).
