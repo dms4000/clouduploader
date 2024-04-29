@@ -89,7 +89,6 @@ CHECK_BLOB=$(exec az storage blob exists\
 
 if [[ "$CHECK_BLOB" == *"false"* ]] ; then
     echo "Blob doesn't exists in the storage"
-    echo $NAME
     OVERWRITE='false'
     main_upload
     link
