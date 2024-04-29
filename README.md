@@ -1,7 +1,9 @@
 # clouduploader
 
-Helps to upload file to Azure Blob Storage.
-Now you may uload one file at once.
+Helps to upload file to Azure Blob Storage. Provides shareble link to blob.
+
+Now you may upload one file at once.
+
 
 # How to Install
 
