@@ -21,4 +21,5 @@ Now you may upload one file at once.
 
 1. Go to working directory e.g. `cd ~/upload`
 2. Run script `clouduploader`
+1. Run > az login
 3. Go through the steps
